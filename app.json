@@ -11,6 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "owner": "team_carnage",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -18,11 +19,11 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.gaishimo.example1",
+      "bundleIdentifier": "com.team_carnage.widget",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.gaishimo.example1",
+      "package": "com.team_carnage.widget",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -32,8 +33,34 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      ["expo-build-properties", { "android": { "kotlinVersion": "1.8.22" } }],
-      ["./app.plugin", { "devTeamId": "<APPLE_DEV_TEAM_ID>" }]
-    ]
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.8.22"
+          }
+        }
+      ],
+      [
+        "./app.plugin"
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "widgets",
+                  "bundleIdentifier": "com.team_carnage.widget"
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "47fa7766-d6e0-4d2e-8503-845e7b3feb23"
+      }
+    }
   }
 }
