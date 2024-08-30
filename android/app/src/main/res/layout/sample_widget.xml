@@ -2,6 +2,7 @@
     style="@style/Widget.EASWidgetExample.AppWidget.Container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/appwidget_container"
     android:theme="@style/AppTheme.AppWidgetContainer">
 
     <TextView
@@ -16,12 +17,4 @@
         android:text="@string/appwidget_text"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
-        <TextClock
-        android:id="@+id/text_clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:format12Hour="hh:mm a"
-        android:format24Hour="HH:mm" />
 </RelativeLayout>
